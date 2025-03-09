@@ -3,9 +3,9 @@ title                    : "算法转AI产品作品集"
 subtitle                 : "技术与产品的完美融合"
 name                     : "您的名字"
 description              : "算法工程师转型AI产品经理的专业作品集"
-url                      : # 填入您的GitHub Pages URL，如 "https://username.github.io"
+url                      : "https://sting1000.github.io" # 填入您的GitHub Pages URL
 baseurl                  : # 如果您的网站不在根目录，填入子目录路径
-repository               : # GitHub用户名/仓库名
+repository               : "sting1000/sting1000.github.io" # GitHub用户名/仓库名
 teaser                   : # 默认帖子缩略图
 logo                     : # 网站logo路径
 masthead_title           : # 如不设置则默认使用网站标题
