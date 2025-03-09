@@ -1,28 +1,7 @@
 ---
 title: "智能客服NLP引擎"
 excerpt: "结合NLP技术与产品设计的企业级解决方案，提升客服效率80%"
-header:
-  image: /assets/images/project-1-header.jpg
-  teaser: /assets/images/project-1.jpg
-sidebar:
-  - title: "角色"
-    image: /assets/images/role-icon.png
-    image_alt: "角色图标"
-    text: "算法负责人 & 产品参与者"
-  - title: "技术栈"
-    text: "BERT, Python, TensorFlow, RESTful API"
-  - title: "业务领域"
-    text: "企业智能客服"
-gallery:
-  - url: /assets/images/p1-arch.jpg
-    image_path: /assets/images/p1-arch.jpg
-    alt: "系统架构图"
-  - url: /assets/images/p1-flow.jpg
-    image_path: /assets/images/p1-flow.jpg
-    alt: "流程图"
-  - url: /assets/images/p1-metrics.jpg
-    image_path: /assets/images/p1-metrics.jpg
-    alt: "性能指标"
+layout: post
 ---
 
 ## 项目背景
@@ -44,8 +23,6 @@ gallery:
 - **产品参与**: 积极参与用户访谈、产品需求定义和交互设计
 
 ## 技术方案
-
-{% include gallery caption="项目技术架构与流程" %}
 
 ### 核心NLP引擎
 

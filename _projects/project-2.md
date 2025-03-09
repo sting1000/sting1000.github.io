@@ -1,28 +1,7 @@
 ---
 title: "推荐系统优化与产品化"
 excerpt: "将复杂的推荐算法转化为易用的产品功能，提升用户停留时间35%"
-header:
-  image: /assets/images/project-2-header.jpg
-  teaser: /assets/images/project-2.jpg
-sidebar:
-  - title: "角色"
-    image: /assets/images/role-icon.png
-    image_alt: "角色图标"
-    text: "算法工程师 & 产品功能设计者"
-  - title: "技术栈"
-    text: "PyTorch, Python, 分布式系统, A/B测试"
-  - title: "业务领域"
-    text: "内容推荐, 用户增长"
-gallery:
-  - url: /assets/images/p2-before.jpg
-    image_path: /assets/images/p2-before.jpg
-    alt: "优化前"
-  - url: /assets/images/p2-after.jpg
-    image_path: /assets/images/p2-after.jpg
-    alt: "优化后"
-  - url: /assets/images/p2-dashboard.jpg
-    image_path: /assets/images/p2-dashboard.jpg
-    alt: "分析面板"
+layout: post
 ---
 
 ## 项目背景
@@ -44,8 +23,6 @@ gallery:
 - **产品职责**: 设计推荐内容的展示方式和用户控制界面
 
 ## 解决方案
-
-{% include gallery caption="推荐系统优化前后对比" %}
 
 ### 算法层面
 
