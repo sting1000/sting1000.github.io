@@ -3,52 +3,94 @@ layout: default
 ---
 
 <div class="banner">
-  <h1>算法转AI产品作品集</h1>
-  <p>技术背景 + 产品思维 = 卓越的AI产品</p>
+  <h1>苏哲辰</h1>
+  <p>AI解决方案架构师 · 5G技术专家 · EPFL计算机科学硕士</p>
 </div>
 
 <div class="feature-section">
-  <h2>欢迎来到我的专业作品集</h2>
-  <p>我是一名拥有扎实算法背景的工程师，正在向AI产品经理方向发展。我的使命是将深厚的技术知识与产品思维相结合，打造出卓越的AI解决方案。</p>
+  <h2>专业简介</h2>
+  <p>我是一名拥有深厚技术背景的AI解决方案架构师，专注于AR/VR环境下的计算机视觉、5G通信技术以及边缘计算解决方案。凭借在华为三年多的丰富经验，我擅长将尖端算法与真实业务需求相结合，打造兼具技术创新性与商业价值的产品方案。</p>
   
-  <h3>专业技能</h3>
+  <h3>核心专长</h3>
   <div>
-    <span class="skill-tag">机器学习</span>
+    <span class="skill-tag">AI算法设计</span>
     <span class="skill-tag">深度学习</span>
-    <span class="skill-tag">自然语言处理</span>
     <span class="skill-tag">计算机视觉</span>
-    <span class="skill-tag">分布式系统</span>
+    <span class="skill-tag">5G网络优化</span>
+    <span class="skill-tag">AR/VR解决方案</span>
     
-    <span class="skill-tag product">需求分析</span>
-    <span class="skill-tag product">用户研究</span>
-    <span class="skill-tag product">产品规划</span>
-    <span class="skill-tag product">敏捷开发</span>
+    <span class="skill-tag product">解决方案架构</span>
+    <span class="skill-tag product">性能优化</span>
+    <span class="skill-tag product">商业化落地</span>
+    <span class="skill-tag product">技术路线规划</span>
     
     <span class="skill-tag soft">跨团队协作</span>
     <span class="skill-tag soft">技术沟通</span>
-    <span class="skill-tag soft">项目管理</span>
+    <span class="skill-tag soft">国际化视野</span>
   </div>
 </div>
 
-## 特色项目
+## 专业经历亮点
 
 <div class="two-column">
   <div class="card">
-    <h3>智能客服NLP引擎</h3>
-    <p>结合NLP技术与产品设计的企业级解决方案，提升客服效率80%</p>
-    <a href="/projects/project-1/" class="btn">了解详情</a>
+    <h3>AR环境深度估计算法</h3>
+    <p>设计了亚厘米级精度的深度估计算法，显著提升AR应用中的空间感知能力与交互体验。</p>
+    <a href="/projects/ar-depth-estimation/" class="btn">了解详情</a>
   </div>
   
   <div class="card">
-    <h3>推荐系统优化与产品化</h3>
-    <p>将复杂的推荐算法转化为易用的产品功能，提升用户停留时间35%</p>
-    <a href="/projects/project-2/" class="btn">了解详情</a>
+    <h3>5G资源分配策略创新</h3>
+    <p>开创性地设计了RedCap SRS资源分配策略，已被菲律宾Dito采用，服务超过100万用户。</p>
+    <a href="/projects/redcap-strategy/" class="btn">了解详情</a>
   </div>
 </div>
 
-## 最新思考
+<div class="two-column">
+  <div class="card">
+    <h3>场景识别实时优化</h3>
+    <p>优化场景识别算法，实现FPS提升30%的实时处理能力，同时保持识别准确率。</p>
+    <a href="/projects/scene-recognition/" class="btn">了解详情</a>
+  </div>
+  
+  <div class="card">
+    <h3>FWA业务加速模型</h3>
+    <p>为沙特Zain运营商打造FWA业务加速模型，提升游戏/视频体验质量40%。</p>
+    <a href="/projects/fwa-acceleration/" class="btn">了解详情</a>
+  </div>
+</div>
 
-{% for post in site.posts limit:3 %}
+## 教育背景
+
+<div class="feature-section">
+  <div class="two-column">
+    <div>
+      <h3>瑞士洛桑联邦理工学院 (EPFL)</h3>
+      <p>计算机科学硕士学位<br>2018年9月 - 2021年10月</p>
+    </div>
+    
+    <div>
+      <h3>电子科技大学</h3>
+      <p>计算机科学与技术学士学位<br>2014年 - 2018年</p>
+    </div>
+  </div>
+  
+  <div class="two-column">
+    <div>
+      <h3>加州大学圣塔芭芭拉分校 (UCSB)</h3>
+      <p>计算机科学交换生<br>2017年</p>
+    </div>
+    
+    <div>
+      <h3>台湾科技大学</h3>
+      <p>计算机科学与信息工程交换生<br>2016年</p>
+    </div>
+  </div>
+</div>
+
+## 最新见解
+
+{% for post in site.posts limit:2 %}
 <div class="card">
   <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
   <p>{{ post.excerpt }}</p>

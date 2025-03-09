@@ -1,13 +1,13 @@
-/* 基本样式定义 - 作为备份，确保页面具有基本视觉效果 */
+/* 基本样式定义 - 莫兰迪色系 */
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #10b981;
-  --accent-color: #f43f5e;
-  --text-color: #1e293b;
-  --text-light: #64748b;
-  --background-color: #ffffff;
-  --section-bg: #f1f5f9;
-  --border-color: #e2e8f0;
+  --primary-color: #6d878c;     /* 柔和的青灰色 */
+  --secondary-color: #9a9b8c;   /* 淡橄榄绿 */
+  --accent-color: #a78a7f;      /* 温暖的灰棕色 */
+  --text-color: #3e4144;        /* 深灰色文字 */
+  --text-light: #7c7c7d;        /* 中灰色文字 */
+  --background-color: #f8f7f4;  /* 米白色背景 */
+  --section-bg: #ededea;        /* 淡灰色区块背景 */
+  --border-color: #d9d7d2;      /* 浅灰色边框 */
 }
 
 body {
@@ -41,6 +41,10 @@ h1 {
 a {
   color: var(--primary-color);
   text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
 }
 
 .banner {
@@ -86,6 +90,10 @@ a {
   border-radius: 6px;
   font-weight: 500;
   text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
 }
 
 .two-column {

@@ -1,16 +1,16 @@
-/* 全局样式变量 */
+/* 全局样式变量 - 莫兰迪色系 */
 :root {
-  --primary-color: #2563eb;     /* 专业蓝色 */
-  --secondary-color: #10b981;   /* 清新绿色 */
-  --accent-color: #f43f5e;      /* 点缀红色 */
-  --text-color: #1e293b;        /* 主要文字颜色 */
-  --text-light: #64748b;        /* 次要文字颜色 */
-  --background-color: #ffffff;  /* 背景色 */
-  --section-bg: #f1f5f9;        /* 区块背景色 */
-  --border-color: #e2e8f0;      /* 边框颜色 */
-  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
-  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --primary-color: #6d878c;     /* 柔和的青灰色 */
+  --secondary-color: #9a9b8c;   /* 淡橄榄绿 */
+  --accent-color: #a78a7f;      /* 温暖的灰棕色 */
+  --text-color: #3e4144;        /* 深灰色文字 */
+  --text-light: #7c7c7d;        /* 中灰色文字 */
+  --background-color: #f8f7f4;  /* 米白色背景 */
+  --section-bg: #ededea;        /* 淡灰色区块背景 */
+  --border-color: #d9d7d2;      /* 浅灰色边框 */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.03);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.08);
 }
 
 /* 基础样式 */
@@ -304,7 +304,7 @@ blockquote p:last-child {
   box-shadow: var(--shadow-sm);
 }
 
-/* 头部横幅 */
+/* 头部横幅 - 莫兰迪色系渐变 */
 .banner {
   background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
   color: white;

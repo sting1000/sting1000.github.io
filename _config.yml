@@ -1,8 +1,8 @@
 locale                   : "zh-CN"
-title                    : "算法转AI产品作品集"
-subtitle                 : "技术与产品的完美融合"
-name                     : "您的名字"
-description              : "算法工程师转型AI产品经理的专业作品集"
+title                    : "苏哲辰 | AI解决方案与产品专家"
+subtitle                 : "技术深度与产品视角的融合"
+name                     : "苏哲辰"
+description              : "AI解决方案架构师 · 5G技术专家 · 产品创新者"
 url                      : "https://sting1000.github.io" # 填入您的GitHub Pages URL
 baseurl                  : # 如果您的网站不在根目录，填入子目录路径
 repository               : "sting1000/sting1000.github.io" # GitHub用户名/仓库名
@@ -14,28 +14,28 @@ words_per_minute         : 200
 
 # 网站作者信息
 author:
-  name             : "您的名字"
+  name             : "苏哲辰"
   avatar           : # 头像图片路径
-  bio              : "算法工程师 | AI产品经理 | 技术爱好者"
-  location         : "中国"
+  bio              : "AI解决方案架构师 | 5G技术专家 | 深厚算法背景"
+  location         : "中国深圳"
   email            : # 可选
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/yourusername"
+      url: "https://github.com/sting1000"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/yourusername"
+      url: "https://linkedin.com/in/zhechensu"
 
 # 页脚链接
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/yourusername"
+      url: "https://github.com/sting1000"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://linkedin.com/in/yourusername"
+      url: "https://linkedin.com/in/zhechensu"
 
 # 评论系统设置（可选）
 comments:
