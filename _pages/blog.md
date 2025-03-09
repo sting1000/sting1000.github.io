@@ -9,10 +9,10 @@ permalink: /blog/
   <p>关于技术、产品和职业发展的见解</p>
 </div>
 
-<div class="feature-section">
+<!-- <div class="feature-section">
   <h2>我的博客</h2>
   <p>在这里，我分享对AI技术、产品设计和职业发展的思考。这些文章记录了我从算法工程师到产品经理的转型过程中的收获与洞察。</p>
-</div>
+</div> -->
 
 {% for post in site.posts %}
 <div class="card">

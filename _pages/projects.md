@@ -9,10 +9,10 @@ permalink: /projects/
   <p>技术与产品思维的结合实践</p>
 </div>
 
-<div class="feature-section">
+<!-- <div class="feature-section">
   <h2>作品集精选</h2>
   <p>以下是我近期参与的项目，展示了我如何将算法背景和产品思维相结合，创造出既技术先进又解决实际问题的解决方案。</p>
-</div>
+</div> -->
 
 <div class="card">
   <h3>智能客服NLP引擎</h3>
