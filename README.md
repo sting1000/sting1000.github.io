@@ -1,150 +1,169 @@
 # 苏哲宸 | AI解决方案与产品专家个人网站
 
-这是苏哲宸的个人专业网站，基于Jekyll框架和GitHub Pages构建，展示AI解决方案架构师与5G技术专家的专业背景、项目经验和技术见解。
+这是一个基于Jekyll框架和GitHub Pages构建的个人专业网站，展示我作为AI解决方案架构师和5G技术专家的专业背景、项目经验和技术思考。
 
-## 网站概述
-
-这个网站采用了蓝色系莫兰迪色调，设计简洁现代，每个页面都有微妙不同但相互关联的颜色方案，突出专业性和技术特色。主要包含以下内容：
+## 网站概览
 
 - **首页**: 个人简介、核心专长和专业经历亮点
-- **关于我**: 详细的工作经历、教育背景和技术专长
-- **项目**: 技术项目案例，展示AI算法和5G技术解决方案
-- **思考**: 博客文章，分享关于技术、产品和行业的思考
-- **联系**: 联系方式和简历下载
+- **关于我**: 详细的工作经历、教育背景和技能专长
+- **项目**: 技术项目案例详情，展示解决方案架构能力
+- **思考**: 技术博客，分享对AI、5G技术和产品落地的见解
+- **联系**: 专业联系方式和简历下载
 
-## 技术架构
+## 技术栈
 
-- **框架**: Jekyll静态网站生成器
-- **部署**: GitHub Pages托管
-- **样式**: 自定义CSS，莫兰迪色系，响应式设计
-- **内容管理**: Markdown
-- **版本控制**: Git
+- Jekyll静态网站生成器
+- 自定义响应式设计，采用蓝色系莫兰迪色彩方案
+- Markdown内容管理
+- GitHub Pages托管
+- 移动端优化的响应式设计
 
 ## 本地开发指南
 
-1. **环境准备**:
+1. 安装必要环境:
    ```bash
-   # 安装Ruby和Jekyll (macOS)
+   # 安装Ruby (推荐使用Ruby版本管理器如rbenv)
    brew install ruby
-   gem install jekyll bundler
    
-   # 安装Ruby和Jekyll (Ubuntu/Debian)
-   sudo apt-get install ruby-full build-essential
+   # 安装Jekyll和Bundler
    gem install jekyll bundler
    ```
 
-2. **克隆仓库**:
+2. 克隆仓库:
    ```bash
    git clone https://github.com/sting1000/sting1000.github.io.git
    cd sting1000.github.io
    ```
 
-3. **安装依赖**:
+3. 安装依赖:
    ```bash
    bundle install
    ```
 
-4. **本地运行**:
+4. 本地运行服务器:
    ```bash
    bundle exec jekyll serve
    ```
 
-5. **预览网站**: 浏览器访问 `http://localhost:4000`
+5. 在浏览器中访问 `http://localhost:4000` 预览网站
 
 ## 网站维护指南
 
-### 1. 更新基本信息
+### 更新个人信息
 
-网站的基本信息配置在 `_config.yml` 文件中，包括：
-- 网站标题、描述和联系信息
-- 社交媒体链接
-- 导航菜单结构
+1. 编辑 `_config.yml` 文件更新基本信息:
+   - 网站标题、副标题
+   - 个人描述
+   - 社交媒体链接
 
-修改此文件后需要重新启动Jekyll服务器才能生效。
+2. 编辑 `index.md` 和 `_pages/about.md` 更新详细个人资料
 
-### 2. 页面内容更新
+### 添加/更新项目案例
 
-各主要页面的内容位于以下位置：
-- 首页: `index.md`
-- 关于我: `_pages/about.md`
-- 项目页: `_pages/projects.md`和`_projects/`目录下的项目文件
-- 博客: `_pages/blog.md`和`_posts/`目录下的文章文件
-- 联系页: `_pages/contact.md`
-
-所有页面都使用Markdown格式，顶部包含YAML格式的Front Matter配置区。
-
-### 3. 添加新项目
-
-1. 在`_projects/`目录创建新的Markdown文件，如`project-name.md`
-2. 添加Front Matter配置：
+1. 在 `_projects` 目录中创建或编辑Markdown文件
+2. 文件命名推荐: `project-name.md`
+3. 文件格式示例:
    ```yaml
    ---
    layout: project
    title: "项目名称"
-   excerpt: "项目简短描述"
-   date: 2023-01-01
+   excerpt: "简短描述"
    header:
-     teaser: /assets/images/projects/project-thumbnail.jpg
+     image: /assets/images/projects/project-header.jpg
    ---
+   
+   ## 项目背景
+   
+   描述项目背景和业务需求...
+   
+   ## 技术挑战
+   
+   列出主要技术挑战...
+   
+   ## 解决方案
+   
+   详细说明您的解决方案...
+   
+   ## 业务成果
+   
+   量化项目成果...
    ```
-3. 编写项目内容，建议包含：
-   - 项目背景与目标
-   - 技术难点与挑战
-   - 解决方案设计
-   - 实施成果与价值
-   - 关键技术亮点
 
-### 4. 发布新博客文章
+### 发布博客文章
 
-1. 在`_posts/`目录创建新文件，命名格式为`YYYY-MM-DD-title.md`
-2. 添加Front Matter配置：
+1. 在 `_posts` 目录中创建新的Markdown文件
+2. 文件命名格式: `YYYY-MM-DD-article-title.md`
+3. 文件格式示例:
    ```yaml
    ---
    layout: post
    title: "文章标题"
-   excerpt: "文章摘要"
-   categories: [分类名称]
-   tags: [标签1, 标签2]
+   date: YYYY-MM-DD
+   categories:
+     - 技术
+     - 思考
+   tags:
+     - AI
+     - 5G
+   ---
+   
+   文章正文内容...
+   ```
+
+### 更新样式
+
+1. 主要样式定义在 `_includes/inline-styles.html`
+2. 页面特定样式使用类选择器: `.home`, `.about`, `.projects`, `.blog`, `.contact`
+3. 颜色变量定义在CSS `:root` 部分，修改这些变量可以全局更改网站配色
+
+### 添加新页面
+
+1. 在 `_pages` 目录创建新的Markdown文件
+2. 设置页面Front Matter:
+   ```yaml
+   ---
+   layout: default
+   title: 页面标题
+   permalink: /custom-url/
    ---
    ```
-3. 使用Markdown编写文章内容
+3. 在 `_config.yml` 的 `main` 部分添加导航链接
 
-### 5. 修改网站样式
+## 部署流程
 
-网站的样式文件位于：
-- 内联样式: `_includes/inline-styles.html`（主要颜色方案）
-- CSS文件: `assets/css/main.css`（全局样式）
+网站采用GitHub Pages自动部署:
 
-每个页面有独特的颜色方案，通过在`<body>`标签上的类名（home, about, projects, blog, contact）来区分。
+1. 本地修改后，提交并推送到GitHub:
+   ```bash
+   git add .
+   git commit -m "描述您的更新"
+   git push origin master
+   ```
 
-### 6. 图片管理
+2. GitHub Actions会自动构建并部署网站
+3. 几分钟后，更改将在 https://sting1000.github.io 生效
 
-- 所有图片存放在 `assets/images/` 目录
-- 建议按照类型创建子目录，如 `projects/`, `posts/`, `general/`
-- 上传图片前优化大小，推荐使用WebP格式以获得更好的性能
+## 故障排查
 
-### 7. 部署更新
+- **样式问题**: 检查 `_includes/inline-styles.html` 和浏览器开发者工具
+- **页面404**: 确认 `permalink` 设置正确且文件位于正确目录
+- **图片不显示**: 确认路径正确，GitHub Pages区分大小写
 
-将修改推送到GitHub仓库的main分支后，GitHub Pages会自动构建并发布网站：
-```bash
-git add .
-git commit -m "描述你的更新内容"
-git push origin main
+## 目录结构说明
+
 ```
-
-更新通常在几分钟内生效，可以访问 https://sting1000.github.io 查看结果。
-
-## 故障排除
-
-1. **样式未加载**: 检查开发者工具中的网络请求和控制台错误
-2. **页面404错误**: 检查文件路径和Front Matter中的permalink设置
-3. **构建失败**: 查看GitHub Actions中的构建日志
-4. **本地预览与线上不一致**: 确保依赖版本匹配，试着运行`bundle update`
-
-## 联系方式
-
-- GitHub: [sting1000](https://github.com/sting1000)
-- LinkedIn: [苏哲宸](https://linkedin.com/in/zhechensu)
+sting1000.github.io/
+├── _config.yml          # 网站配置文件
+├── _data/               # 导航等数据
+├── _includes/           # 可重用组件
+├── _layouts/            # 页面布局模板
+├── _pages/              # 主要页面内容
+├── _posts/              # 博客文章
+├── _projects/           # 项目案例
+├── assets/              # 静态资源(图片、CSS、JS)
+├── index.md             # 首页内容
+└── README.md            # 项目说明文档
+```
 
 ---
 
