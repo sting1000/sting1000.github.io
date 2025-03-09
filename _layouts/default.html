@@ -8,7 +8,17 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+  
+  <!-- 多种CSS引用方式，确保至少一种能生效 -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <!-- 使用绝对路径引用 -->
+  <link rel="stylesheet" href="https://sting1000.github.io/assets/css/main.css">
+  
+  <!-- 添加内联样式作为备份 -->
+  <style>
+    {% include inline-styles.html %}
+  </style>
   <!-- 添加字体图标 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -23,5 +33,17 @@
   </main>
 
   {% include footer.html %}
+
+  <!-- 添加调试信息 -->
+  <script>
+    console.log('正在尝试加载样式表');
+    document.addEventListener('DOMContentLoaded', function() {
+      // 检查样式是否已经加载
+      var styles = document.styleSheets;
+      for (var i = 0; i < styles.length; i++) {
+        console.log('已加载样式表:', styles[i].href);
+      }
+    });
+  </script>
 </body>
 </html> 

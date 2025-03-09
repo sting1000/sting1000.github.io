@@ -119,9 +119,15 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-# 主题设置
-theme: jekyll-theme-cayman
+# 主题设置 - 使用GitHub Pages默认支持的主题
+theme: minima
+# jekyll-theme-cayman
 # minimal_mistakes_skin: "default" # 可选: air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+
+# 确保样式表路径正确
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # 包含/排除文件
 include:
