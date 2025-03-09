@@ -1,13 +1,13 @@
-/* 基本样式定义 - 莫兰迪色系 */
+/* 基本样式定义 - 暖色调莫兰迪色系 */
 :root {
-  --primary-color: #6d878c;     /* 柔和的青灰色 */
-  --secondary-color: #9a9b8c;   /* 淡橄榄绿 */
-  --accent-color: #a78a7f;      /* 温暖的灰棕色 */
-  --text-color: #3e4144;        /* 深灰色文字 */
-  --text-light: #7c7c7d;        /* 中灰色文字 */
-  --background-color: #f8f7f4;  /* 米白色背景 */
-  --section-bg: #ededea;        /* 淡灰色区块背景 */
-  --border-color: #d9d7d2;      /* 浅灰色边框 */
+  --primary-color: #b4a398;     /* 暖灰棕色 */
+  --secondary-color: #c3b095;   /* 温暖的米棕色 */
+  --accent-color: #d9ad7c;      /* 柔和的杏桃色 */
+  --text-color: #4a4541;        /* 深棕灰色文字 */
+  --text-light: #8c8279;        /* 中棕灰色文字 */
+  --background-color: #f7f4ef;  /* 米白色背景，偏暖 */
+  --section-bg: #eeebe4;        /* 暖灰色区块背景 */
+  --border-color: #dcd6cc;      /* 浅棕灰色边框 */
 }
 
 body {
@@ -130,4 +130,35 @@ a:hover {
   h1 {
     font-size: 2em;
   }
+} 
+
+/* 教育部分样式 */
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.education-item {
+  background-color: var(--background-color);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.2em 1.5em;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.education-item h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.education-item p {
+  margin-bottom: 0;
+  color: var(--text-light);
 } 

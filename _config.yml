@@ -1,7 +1,7 @@
 locale                   : "zh-CN"
-title                    : "苏哲辰 | AI解决方案与产品专家"
+title                    : "苏哲宸 | AI解决方案与产品专家"
 subtitle                 : "技术深度与产品视角的融合"
-name                     : "苏哲辰"
+name                     : "苏哲宸"
 description              : "AI解决方案架构师 · 5G技术专家 · 产品创新者"
 url                      : "https://sting1000.github.io" # 填入您的GitHub Pages URL
 baseurl                  : # 如果您的网站不在根目录，填入子目录路径
@@ -14,7 +14,7 @@ words_per_minute         : 200
 
 # 网站作者信息
 author:
-  name             : "苏哲辰"
+  name             : "苏哲宸"
   avatar           : # 头像图片路径
   bio              : "AI解决方案架构师 | 5G技术专家 | 深厚算法背景"
   location         : "中国深圳"

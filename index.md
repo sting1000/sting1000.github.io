@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="banner">
-  <h1>苏哲辰</h1>
+  <h1>苏哲宸</h1>
   <p>AI解决方案架构师 · 5G技术专家 · EPFL计算机科学硕士</p>
 </div>
 
@@ -62,29 +62,15 @@ layout: default
 
 ## 教育背景
 
-<div class="feature-section">
-  <div class="two-column">
-    <div>
-      <h3>瑞士洛桑联邦理工学院 (EPFL)</h3>
-      <p>计算机科学硕士学位<br>2018年9月 - 2021年10月</p>
-    </div>
-    
-    <div>
-      <h3>电子科技大学</h3>
-      <p>计算机科学与技术学士学位<br>2014年 - 2018年</p>
-    </div>
+<div class="feature-section education-section">
+  <div class="education-item">
+    <h3>瑞士洛桑联邦理工学院 (EPFL)</h3>
+    <p>计算机科学硕士学位<br>2018年9月 - 2021年10月</p>
   </div>
   
-  <div class="two-column">
-    <div>
-      <h3>加州大学圣塔芭芭拉分校 (UCSB)</h3>
-      <p>计算机科学交换生<br>2017年</p>
-    </div>
-    
-    <div>
-      <h3>台湾科技大学</h3>
-      <p>计算机科学与信息工程交换生<br>2016年</p>
-    </div>
+  <div class="education-item">
+    <h3>电子科技大学</h3>
+    <p>计算机科学与技术学士学位<br>2014年 - 2018年</p>
   </div>
 </div>
 
