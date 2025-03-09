@@ -7,6 +7,20 @@ layout: default
   <p>AI解决方案架构师 · 5G技术专家 · EPFL计算机科学硕士</p>
 </div>
 
+<div class="profile-section">
+  <div class="profile-photo">
+    <img src="/assets/images/profile-photo.jpg" alt="苏哲宸照片">
+  </div>
+  <div class="profile-intro">
+    <h2>您好，欢迎访问我的专业空间</h2>
+    <p>作为一名AI解决方案架构师和5G技术专家，我致力于将前沿技术转化为实际商业价值。</p>
+    <div class="profile-links">
+      <a href="/about/" class="btn">了解更多</a>
+      <a href="/contact/" class="btn btn-outline">联系我</a>
+    </div>
+  </div>
+</div>
+
 <div class="feature-section">
   <h2>专业简介</h2>
   <p>我是一名拥有深厚技术背景的AI解决方案架构师，专注于AR/VR环境下的计算机视觉、5G通信技术以及边缘计算解决方案。凭借在华为三年多的丰富经验，我擅长将尖端算法与真实业务需求相结合，打造兼具技术创新性与商业价值的产品方案。</p>
