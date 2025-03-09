@@ -21,11 +21,31 @@ permalink: /about/
     </ul>
     
     <h3>工作经历</h3>
-    <ul>
-      <li>高级算法工程师 @ 科技公司 (2020-至今)</li>
-      <li>机器学习工程师 @ 互联网公司 (2018-2020)</li>
-      <li>数据科学实习生 @ 初创公司 (2017)</li>
-    </ul>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2020年至今</div>
+        <h4 class="timeline-title">高级算法工程师 @ 科技公司</h4>
+        <div class="timeline-content">
+          <p>负责NLP模型开发和优化，同时参与产品决策过程，提供技术可行性评估。</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2018年-2020年</div>
+        <h4 class="timeline-title">机器学习工程师 @ 互联网公司</h4>
+        <div class="timeline-content">
+          <p>开发推荐系统算法，构建数据处理pipeline，提升用户体验和留存率。</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item">
+        <div class="timeline-date">2017年</div>
+        <h4 class="timeline-title">数据科学实习生 @ 初创公司</h4>
+        <div class="timeline-content">
+          <p>参与用户行为数据分析，构建初步的机器学习模型预测用户需求。</p>
+        </div>
+      </div>
+    </div>
   </div>
   
   <div>
@@ -40,14 +60,55 @@ permalink: /about/
     
     <p>这种认知促使我拓展专业边界，将算法思维与产品思维相结合，打造真正有价值的AI解决方案。</p>
     
-    <h3>核心优势</h3>
-    <div>
-      <span class="skill-tag">算法原理深刻理解</span>
-      <span class="skill-tag">技术与业务转化能力</span>
-      <span class="skill-tag product">用户需求洞察</span>
-      <span class="skill-tag product">产品规划执行</span>
-      <span class="skill-tag soft">跨部门协作</span>
-      <span class="skill-tag soft">项目推动力</span>
+    <h3>核心技能</h3>
+    <div class="skill-progress">
+      <div class="skill-name">
+        <span>算法开发与优化</span>
+        <span class="skill-level">精通</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 95%;"></div>
+      </div>
+    </div>
+    
+    <div class="skill-progress">
+      <div class="skill-name">
+        <span>数据分析与洞察</span>
+        <span class="skill-level">精通</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 90%;"></div>
+      </div>
+    </div>
+    
+    <div class="skill-progress">
+      <div class="skill-name">
+        <span>产品需求分析</span>
+        <span class="skill-level">熟练</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 85%;"></div>
+      </div>
+    </div>
+    
+    <div class="skill-progress">
+      <div class="skill-name">
+        <span>用户研究</span>
+        <span class="skill-level">熟练</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 80%;"></div>
+      </div>
+    </div>
+    
+    <div class="skill-progress">
+      <div class="skill-name">
+        <span>产品策略与规划</span>
+        <span class="skill-level">良好</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 75%;"></div>
+      </div>
     </div>
   </div>
 </div>
@@ -57,6 +118,15 @@ permalink: /about/
   <blockquote>
     优秀的AI产品不仅需要先进的算法，更需要深入理解用户需求和业务价值。将技术可行性与产品体验相平衡，是打造成功AI解决方案的关键。
   </blockquote>
+  
+  <p>我相信AI产品成功的关键在于融合技术洞察与用户视角。作为同时具备算法专业知识和产品思维的从业者，我能够：</p>
+  
+  <ul>
+    <li>准确评估AI技术的能力边界，避免过度承诺</li>
+    <li>识别算法在产品中的最佳应用场景</li>
+    <li>在技术团队和业务部门之间建立有效沟通</li>
+    <li>将复杂的技术能力包装成易用的产品功能</li>
+  </ul>
 </div>
 
 <div class="card">
