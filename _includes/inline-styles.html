@@ -1,6 +1,6 @@
 /* 基本样式定义 - 蓝色系莫兰迪色系 */
 :root {
-  /* 基础蓝色系莫兰迪配色 */
+  /* 全局基础颜色 */
   --primary-color: #5a7a8c;     /* 柔和的蓝灰色 */
   --secondary-color: #7d9bab;   /* 淡蓝色 */
   --accent-color: #4c6575;      /* 深蓝灰色强调 */
@@ -10,25 +10,35 @@
   --section-bg: #e9eef2;        /* 淡蓝灰色区块背景 */
   --border-color: #d1dce2;      /* 浅蓝灰色边框 */
   
-  /* 页面特定配色 - 首页 */
-  --home-primary: #5a7a8c;      /* 保持基础蓝色调 */
+  /* 首页特定颜色 - 蓝灰色调 */
+  --home-primary: #5a7a8c;
+  --home-secondary: #7d9bab;
   --home-accent: #4c6575;
+  --home-section-bg: #e9eef2;
   
-  /* 页面特定配色 - 关于我 (绿色调) */
-  --about-primary: #5a8c7a;     /* 柔和的绿灰色 */
-  --about-accent: #4c756a;      /* 深绿灰色强调 */
+  /* 关于我页特定颜色 - 青蓝色调 */
+  --about-primary: #4a7c8c;
+  --about-secondary: #689eae;
+  --about-accent: #3d6975;
+  --about-section-bg: #e3eef2;
   
-  /* 页面特定配色 - 项目 (紫色调) */
-  --projects-primary: #6f5a8c;  /* 柔和的紫灰色 */
-  --projects-accent: #5a4c75;   /* 深紫灰色强调 */
+  /* 项目页特定颜色 - 蓝紫色调 */
+  --projects-primary: #5d6e9c;
+  --projects-secondary: #7c8db6;
+  --projects-accent: #4b5a86;
+  --projects-section-bg: #e6eaf5;
   
-  /* 页面特定配色 - 思考 (青色调) */
-  --blog-primary: #5a8c8c;      /* 柔和的青灰色 */
-  --blog-accent: #4c7575;       /* 深青灰色强调 */
+  /* 思考页特定颜色 - 灰蓝色调 */
+  --blog-primary: #536878;
+  --blog-secondary: #708090;
+  --blog-accent: #3d4f61;
+  --blog-section-bg: #e6eaef;
   
-  /* 页面特定配色 - 联系 (蓝紫色调) */
-  --contact-primary: #5a6b8c;   /* 柔和的蓝紫灰色 */
-  --contact-accent: #4c5975;    /* 深蓝紫灰色强调 */
+  /* 联系页特定颜色 - 蓝绿色调 */
+  --contact-primary: #4a7d83;
+  --contact-secondary: #6aa5aa;
+  --contact-accent: #3b686d;
+  --contact-section-bg: #e3eeef;
 }
 
 body {
@@ -38,6 +48,55 @@ body {
   background-color: var(--background-color);
   margin: 0;
   padding: 0;
+}
+
+/* 页面特定样式 */
+body.home .banner,
+body.home .btn { background: linear-gradient(120deg, var(--home-primary), var(--home-secondary)); }
+body.home .feature-section { background-color: var(--home-section-bg); }
+body.home h1, body.home h3, body.home a { color: var(--home-primary); }
+body.home a:hover { color: var(--home-accent); }
+body.home .btn:hover { color: white; opacity: 0.9; }
+body.home .education-item { border-left-color: var(--home-accent); }
+
+body.about .banner,
+body.about .btn { background: linear-gradient(120deg, var(--about-primary), var(--about-secondary)); }
+body.about .feature-section { background-color: var(--about-section-bg); }
+body.about h1, body.about h3, body.about a { color: var(--about-primary); }
+body.about a:hover { color: var(--about-accent); }
+body.about .btn:hover { color: white; opacity: 0.9; }
+
+body.projects .banner,
+body.projects .btn { background: linear-gradient(120deg, var(--projects-primary), var(--projects-secondary)); }
+body.projects .feature-section { background-color: var(--projects-section-bg); }
+body.projects h1, body.projects h3, body.projects a { color: var(--projects-primary); }
+body.projects a:hover { color: var(--projects-accent); }
+body.projects .btn:hover { color: white; opacity: 0.9; }
+
+body.blog .banner,
+body.blog .btn { background: linear-gradient(120deg, var(--blog-primary), var(--blog-secondary)); }
+body.blog .feature-section { background-color: var(--blog-section-bg); }
+body.blog h1, body.blog h3, body.blog a { color: var(--blog-primary); }
+body.blog a:hover { color: var(--blog-accent); }
+body.blog .btn:hover { color: white; opacity: 0.9; }
+
+body.contact .banner,
+body.contact .btn { background: linear-gradient(120deg, var(--contact-primary), var(--contact-secondary)); }
+body.contact .feature-section { background-color: var(--contact-section-bg); }
+body.contact h1, body.contact h3, body.contact a { color: var(--contact-primary); }
+body.contact a:hover { color: var(--contact-accent); }
+body.contact .btn:hover { color: white; opacity: 0.9; }
+
+/* 网站标题黑色设置 */
+.site-title a {
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+.site-header .site-title a {
+  color: #000000 !important;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .container {
@@ -182,273 +241,4 @@ a:hover {
 .education-item p {
   margin-bottom: 0;
   color: var(--text-light);
-}
-
-/* 首页照片区域样式 */
-.profile-section {
-  display: flex;
-  gap: 2.5em;
-  margin: 3em 0;
-  align-items: center;
-}
-
-.profile-photo {
-  flex: 0 0 250px;
-}
-
-.profile-photo img {
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border: 4px solid white;
-}
-
-.profile-intro {
-  flex: 1;
-}
-
-.profile-intro h2 {
-  margin-top: 0;
-  color: var(--primary-color);
-}
-
-.profile-links {
-  margin-top: 1.5em;
-  display: flex;
-  gap: 1em;
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-}
-
-.btn-outline:hover {
-  background-color: var(--primary-color);
-  color: white;
-  opacity: 1;
-}
-
-@media (max-width: 768px) {
-  .profile-section {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .profile-photo {
-    margin: 0 auto;
-  }
-  
-  .profile-links {
-    justify-content: center;
-  }
-} 
-
-/* 项目页面样式 */
-.project-list-banner {
-  background: linear-gradient(120deg, var(--projects-primary), var(--secondary-color));
-}
-
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5em;
-  margin: 3em 0;
-}
-
-.project-card {
-  display: flex;
-  background-color: var(--background-color);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-}
-
-.project-image {
-  flex: 0 0 35%;
-  background-color: var(--section-bg);
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-details {
-  flex: 1;
-  padding: 2em;
-}
-
-.project-details h2 {
-  margin-top: 0;
-  color: var(--projects-primary);
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  margin: 1em 0;
-}
-
-.project-tag {
-  background-color: var(--section-bg);
-  color: var(--projects-accent);
-  padding: 0.3em 0.8em;
-  border-radius: 4px;
-  font-size: 0.85em;
-}
-
-/* 单个项目页面样式 */
-.project-banner {
-  background: linear-gradient(120deg, var(--projects-primary), var(--secondary-color));
-}
-
-.project-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2em 0;
-}
-
-.project-highlights {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5em;
-  margin: 2em 0;
-}
-
-.highlight-item {
-  background-color: var(--section-bg);
-  border-radius: 8px;
-  padding: 1.5em;
-}
-
-.highlight-item h3 {
-  margin-top: 0;
-  color: var(--projects-primary);
-}
-
-.tech-details, .value-points {
-  margin: 1.5em 0;
-  padding-left: 1.5em;
-}
-
-.tech-details li, .value-points li {
-  margin-bottom: 0.7em;
-}
-
-.next-prev-links {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 3em;
-}
-
-.caption {
-  text-align: center;
-  font-style: italic;
-  color: var(--text-light);
-  margin-top: 0.5em;
-}
-
-.img-responsive {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* 修改网站标题颜色为黑色 */
-.site-title a {
-  color: #000;
-  font-weight: 700;
-}
-
-/* 响应式调整 */
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-  }
-  
-  .project-image {
-    height: 200px;
-  }
-} 
-
-/* 页面特定样式 */
-.page-home .banner {
-  background: linear-gradient(120deg, var(--home-primary), var(--secondary-color));
-}
-
-.page-home h2, .page-home h3, .page-home a {
-  color: var(--home-primary);
-}
-
-.page-home .btn {
-  background-color: var(--home-primary);
-}
-
-.page-about .banner {
-  background: linear-gradient(120deg, var(--about-primary), var(--secondary-color));
-}
-
-.page-about h2, .page-about h3, .page-about a {
-  color: var(--about-primary);
-}
-
-.page-about .btn {
-  background-color: var(--about-primary);
-}
-
-.page-projects .banner {
-  background: linear-gradient(120deg, var(--projects-primary), var(--secondary-color));
-}
-
-.page-projects h2, .page-projects h3, .page-projects a:not(.btn) {
-  color: var(--projects-primary);
-}
-
-.page-projects .btn {
-  background-color: var(--projects-primary);
-}
-
-.page-blog .banner {
-  background: linear-gradient(120deg, var(--blog-primary), var(--secondary-color));
-}
-
-.page-blog h2, .page-blog h3, .page-blog a {
-  color: var(--blog-primary);
-}
-
-.page-blog .btn {
-  background-color: var(--blog-primary);
-}
-
-.page-contact .banner {
-  background: linear-gradient(120deg, var(--contact-primary), var(--secondary-color));
-}
-
-.page-contact h2, .page-contact h3, .page-contact a {
-  color: var(--contact-primary);
-}
-
-.page-contact .btn {
-  background-color: var(--contact-primary);
-}
-
-/* 黑色网站标题 */
-.site-title a {
-  color: #000 !important;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-@media (max-width: 768px) {
-  .project-card {
-    flex-direction: column;
-  }
-  
-  .project-image {
-    height: 200px;
-  }
 } 
