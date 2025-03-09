@@ -1,0 +1,9 @@
+<nav class="site-nav">
+  <div class="nav-links">
+    <a href="/" {% if page.url == '/' %}class="active"{% endif %}>首页</a>
+    <a href="/about/" {% if page.url == '/about/' %}class="active"{% endif %}>关于我</a>
+    <a href="/projects/" {% if page.url == '/projects/' %}class="active"{% endif %}>项目</a>
+    <a href="/blog/" {% if page.url == '/blog/' %}class="active"{% endif %}>思考</a>
+    <a href="/contact/" {% if page.url == '/contact/' %}class="active"{% endif %}>联系</a>
+  </div>
+</nav> 

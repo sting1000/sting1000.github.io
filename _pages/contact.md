@@ -1,33 +1,64 @@
 ---
-title: "联系"
+layout: default
+title: 联系
 permalink: /contact/
-author_profile: true
 ---
 
-## 联系方式
+<div class="banner">
+  <h1>联系我</h1>
+  <p>期待与您交流与合作</p>
+</div>
 
-如果您对我的专业背景或项目感兴趣，或者有合作机会，欢迎通过以下方式联系我：
-
-<div class="contact-info">
-  <div class="contact-item">
-    <i class="fas fa-envelope"></i> <strong>邮箱:</strong> 
-    <a href="mailto:your.email@example.com">your.email@example.com</a>
+<div class="two-column">
+  <div class="card">
+    <h2>联系方式</h2>
+    <p>如果您对我的背景和项目感兴趣，或有合作机会，欢迎通过以下方式联系我：</p>
+    
+    <p><strong>邮箱：</strong> your.email@example.com</p>
+    
+    <h3>社交媒体</h3>
+    <p>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a><br>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a><br>
+      <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+    </p>
+    
+    <p>您也可以<a href="/assets/files/resume.pdf" class="btn">下载我的简历</a>了解更多专业信息。</p>
   </div>
   
-  <div class="contact-item">
-    <i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> 
-    <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a>
-  </div>
-  
-  <div class="contact-item">
-    <i class="fab fa-github"></i> <strong>GitHub:</strong> 
-    <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+  <div class="feature-section">
+    <h2>我能提供什么</h2>
+    <ul>
+      <li><strong>AI产品咨询</strong> - 结合技术可行性与用户需求</li>
+      <li><strong>算法与产品的融合</strong> - 让AI技术真正解决业务问题</li>
+      <li><strong>产品战略与路线图</strong> - 基于AI技术特点的产品规划</li>
+      <li><strong>技术团队与业务部门的沟通桥梁</strong> - 双向翻译复杂概念</li>
+    </ul>
+    
+    <h3>适合合作的领域</h3>
+    <div>
+      <span class="skill-tag">企业AI解决方案</span>
+      <span class="skill-tag">数据驱动产品</span>
+      <span class="skill-tag">自然语言处理</span>
+      <span class="skill-tag">推荐系统</span>
+      <span class="skill-tag product">用户体验设计</span>
+      <span class="skill-tag product">产品策略</span>
+    </div>
   </div>
 </div>
 
-## 下载简历
-
-您可以<a href="/assets/files/resume.pdf" target="_blank">下载我的完整简历</a>，了解更多关于我的专业背景和技能。
+<div class="card">
+  <h2>交流话题</h2>
+  <p>我很乐意就以下话题进行交流与分享：</p>
+  
+  <ul>
+    <li>AI产品的机遇与挑战</li>
+    <li>技术人员向产品经理的职业转型</li>
+    <li>如何平衡技术可能性与商业价值</li>
+    <li>AI时代的产品设计原则</li>
+    <li>团队协作中的技术与业务沟通</li>
+  </ul>
+</div>
 
 <div class="form-container">
   <h2>留言</h2>

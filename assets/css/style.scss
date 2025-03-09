@@ -1,0 +1,327 @@
+@import "{{ site.theme }}";
+
+/* 全局样式变量 */
+:root {
+  --primary-color: #3498db;     /* 专业蓝色 */
+  --secondary-color: #2ecc71;   /* 清新绿色 */
+  --accent-color: #e74c3c;      /* 点缀红色 */
+  --text-color: #333333;        /* 主要文字颜色 */
+  --text-light: #757575;        /* 次要文字颜色 */
+  --background-color: #ffffff;  /* 背景色 */
+  --section-bg: #f8f9fa;        /* 区块背景色 */
+  --border-color: #e9ecef;      /* 边框颜色 */
+}
+
+/* 基础样式 */
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* 容器布局 */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.5em;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.2em;
+}
+
+h3 {
+  font-size: 1.4em;
+  color: var(--primary-color);
+}
+
+/* 链接样式 */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: darken(var(--primary-color), 15%);
+  text-decoration: underline;
+}
+
+/* 段落和列表样式 */
+p, ul, ol {
+  margin-bottom: 1.5em;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* 强调元素 */
+strong {
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+/* 代码块 */
+code, pre {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--section-bg);
+  border-radius: 3px;
+}
+
+pre {
+  padding: 1em;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+/* 引用块 */
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 1em;
+  margin-left: 0;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* 卡片样式 - 用于项目和博客文章 */
+.card {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+/* 技能标签 */
+.skill-tag {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.skill-tag.product {
+  background-color: var(--secondary-color);
+}
+
+.skill-tag.soft {
+  background-color: var(--accent-color);
+}
+
+/* 响应式设计调整 */
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  
+  .container {
+    width: 95%;
+    padding: 0 10px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* 页眉和页脚 */
+.site-header {
+  background-color: var(--section-bg);
+  padding: 1em 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2em;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title a {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.site-nav .nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+.site-nav a {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.site-nav a.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.site-footer {
+  margin-top: 3em;
+  padding: 2em 0;
+  background-color: var(--section-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+/* 主内容区 */
+.site-content {
+  min-height: 70vh;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: darken(var(--primary-color), 10%);
+  text-decoration: none;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+}
+
+/* 两栏布局 - 适用于关于我页面 */
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.two-column > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* 首页特色内容 */
+.feature-section {
+  background-color: var(--section-bg);
+  padding: 2em;
+  border-radius: 5px;
+  margin: 2em 0;
+}
+
+/* 头部横幅 */
+.banner {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 3em 2em;
+  text-align: center;
+  margin-bottom: 2em;
+  border-radius: 5px;
+}
+
+.banner h1 {
+  border-bottom: none;
+  margin-bottom: 0.5em;
+  color: white;
+}
+
+.banner p {
+  font-size: 1.2em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 文章样式 */
+.post-title {
+  margin-top: 0;
+}
+
+.post-meta {
+  color: var(--text-light);
+  margin-bottom: 2em;
+}
+
+.post-content {
+  margin-bottom: 2em;
+}
+
+.post-navigation {
+  margin-top: 3em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border-color);
+}
+
+.post-pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-date {
+  color: var(--text-light);
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+} 

@@ -1,89 +1,71 @@
 ---
+layout: default
+title: 关于我
 permalink: /about/
-title: "关于我"
-excerpt: "算法工程师到AI产品经理的专业之旅"
-layouts_gallery:
-  - url: /assets/images/experience-1.jpg
-    image_path: /assets/images/experience-1.jpg
-    alt: "工作经历1"
-  - url: /assets/images/experience-2.jpg
-    image_path: /assets/images/experience-2.jpg
-    alt: "工作经历2"
-  - url: /assets/images/experience-3.jpg
-    image_path: /assets/images/experience-3.jpg
-    alt: "工作经历3"
-toc: true
 ---
 
-## 专业简介
+<div class="banner">
+  <h1>关于我</h1>
+  <p>算法工程师 → AI产品经理的转型之路</p>
+</div>
 
-我是一名拥有扎实算法背景的工程师，专注于机器学习和人工智能领域。凭借在算法开发和优化方面的丰富经验，我现正向AI产品经理方向转型，致力于将技术洞察与产品思维相结合，打造真正解决用户问题的AI产品。
+<div class="two-column">
+  <div>
+    <h2>专业背景</h2>
+    <p>我拥有计算机科学与人工智能背景，曾在多家科技公司担任算法工程师，负责机器学习模型的研发和优化。随着对产品全局思维的兴趣增长，我逐渐向AI产品管理方向转型，希望将技术专长与产品视角相结合。</p>
+    
+    <h3>教育背景</h3>
+    <ul>
+      <li>计算机科学硕士，人工智能方向</li>
+      <li>数学学士，专注于应用数学与统计</li>
+    </ul>
+    
+    <h3>工作经历</h3>
+    <ul>
+      <li>高级算法工程师 @ 科技公司 (2020-至今)</li>
+      <li>机器学习工程师 @ 互联网公司 (2018-2020)</li>
+      <li>数据科学实习生 @ 初创公司 (2017)</li>
+    </ul>
+  </div>
+  
+  <div>
+    <h2>为什么转型AI产品经理？</h2>
+    <p>在算法工程师工作中，我发现纯技术解决方案往往无法充分解决用户问题。最成功的AI产品需要：</p>
+    
+    <ul>
+      <li>技术可行性与用户需求的平衡</li>
+      <li>算法能力的合理界定与产品化</li>
+      <li>数据与人的结合，而非单纯依赖自动化</li>
+    </ul>
+    
+    <p>这种认知促使我拓展专业边界，将算法思维与产品思维相结合，打造真正有价值的AI解决方案。</p>
+    
+    <h3>核心优势</h3>
+    <div>
+      <span class="skill-tag">算法原理深刻理解</span>
+      <span class="skill-tag">技术与业务转化能力</span>
+      <span class="skill-tag product">用户需求洞察</span>
+      <span class="skill-tag product">产品规划执行</span>
+      <span class="skill-tag soft">跨部门协作</span>
+      <span class="skill-tag soft">项目推动力</span>
+    </div>
+  </div>
+</div>
 
-我相信优秀的AI产品需要技术与业务的深度融合，而我的技术背景恰好为产品决策提供了独特视角。我不仅理解算法的能力边界，更懂得如何将技术可能性转化为产品价值。
+<div class="feature-section">
+  <h2>我的专业理念</h2>
+  <blockquote>
+    优秀的AI产品不仅需要先进的算法，更需要深入理解用户需求和业务价值。将技术可行性与产品体验相平衡，是打造成功AI解决方案的关键。
+  </blockquote>
+</div>
 
-## 专业技能
-
-### 技术能力
-- **机器学习/深度学习**: 熟练掌握各类经典算法，有模型设计和优化经验
-- **自然语言处理**: 文本分类、情感分析、命名实体识别、语义理解等
-- **计算机视觉**: 图像分类、目标检测、图像分割等
-- **编程语言**: Python, TensorFlow, PyTorch, SQL
-- **大数据处理**: Hadoop, Spark, Kafka
-- **云服务**: AWS, Azure, Google Cloud
-
-### 产品能力
-- **需求分析**: 用户访谈、市场调研、竞品分析
-- **产品规划**: 产品路线图、特性优先级排序、MVP定义
-- **用户体验**: 用户旅程设计、交互设计基础
-- **数据分析**: 用户行为分析、A/B测试设计
-- **敏捷开发**: Scrum, Kanban, 用户故事撰写
-
-### 通用能力
-- **领导能力**: 团队协作、跨部门沟通
-- **沟通能力**: 技术与非技术人员沟通、演讲展示
-- **项目管理**: 时间管理、资源分配、风险控制
-- **商业敏感度**: 商业模式分析、价值主张设计
-
-## 教育背景
-
-- **硕士学位** - 人工智能, 某知名大学, 2018-2020
-- **学士学位** - 计算机科学, 某知名大学, 2014-2018
-
-## 工作经历
-
-{% include gallery id="layouts_gallery" caption="我的专业经历" %}
-
-### 高级算法工程师 | ABC科技有限公司
-*2020年6月 - 至今*
-
-- 领导开发基于深度学习的自然语言处理模型，提高了文本理解准确率20%
-- 优化算法性能，降低了推理延迟30%，显著提升用户体验
-- 参与产品规划会议，从技术角度提供可行性建议
-- 与产品团队紧密合作，将复杂的算法能力包装成易用的API服务
-
-### 算法工程师 | XYZ智能科技公司
-*2018年7月 - 2020年5月*
-
-- 开发并部署机器学习模型用于用户行为预测
-- 构建数据处理pipeline，提高数据处理效率
-- 参与用户反馈收集和分析，改进算法表现
-
-## 我的转型故事
-
-我的职业转型始于对技术实际应用价值的深度思考。作为一名算法工程师，我经常发现即使是最先进的算法，如果不能解决真实的用户问题，也难以创造真正的价值。
-
-在多个项目中，我注意到技术团队和产品团队之间存在"翻译"障碍。一方面，产品经理可能对AI技术的可能性和局限性缺乏足够了解；另一方面，技术人员往往专注于算法优化而忽略了用户真正的需求。
-
-我意识到，具备扎实技术背景的产品经理可以成为连接两个世界的桥梁。凭借我对算法的深入理解，我能更准确地评估技术可行性；同时，通过培养产品思维，我可以确保技术方案真正服务于用户和业务目标。
-
-这就是我决定转型为AI产品经理的原因——利用我的双重背景，创造既技术先进又真正解决问题的AI产品。
-
-## 联系我
-
-如果您对我的经历和技能感兴趣，或者有合作机会，欢迎通过以下方式联系我：
-
-- **邮箱**: your.email@example.com
-- **LinkedIn**: [您的LinkedIn链接](https://linkedin.com/in/yourusername)
-- **GitHub**: [您的GitHub链接](https://github.com/yourusername)
-
-您也可以[下载我的简历](/assets/files/resume.pdf)了解更多信息。 
+<div class="card">
+  <h3>联系方式</h3>
+  <p>如果您对我的背景和项目感兴趣，欢迎通过以下方式联系我：</p>
+  <p>
+    <strong>邮箱：</strong> your.email@example.com<br>
+    <strong>LinkedIn：</strong> <a href="https://linkedin.com/in/yourusername">linkedin.com/in/yourusername</a><br>
+    <strong>GitHub：</strong> <a href="https://github.com/yourusername">github.com/yourusername</a>
+  </p>
+  <a href="/assets/files/resume.pdf" class="btn">下载简历</a>
+</div> 
