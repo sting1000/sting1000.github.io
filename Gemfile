@@ -5,7 +5,7 @@ source "https://rubygems.org"
 
 # 如果你想使用GitHub Pages，取消下面这行的注释，并注释掉上面的jekyll
 gem "github-pages", group: :jekyll_plugins
-gem "minimal-mistakes-jekyll"
+# gem "minimal-mistakes-jekyll"
 
 # 如果你使用Windows系统，取消注释下面这行以提高性能
 # gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]

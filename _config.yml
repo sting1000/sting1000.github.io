@@ -120,8 +120,8 @@ plugins:
   - jekyll-include-cache
 
 # 主题设置
-theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "default" # 可选: air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
+theme: minima
+# minimal_mistakes_skin: "default" # 可选: air, aqua, contrast, dark, dirt, neon, mint, plum, sunrise
 
 # 包含/排除文件
 include:
