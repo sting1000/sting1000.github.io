@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>推荐系统优化与产品化 | 苏哲宸 | AI解决方案与产品专家</title>
+  <meta name="description" content="将复杂的推荐算法转化为易用的产品功能，提升用户停留时间35%">
+  <link rel="canonical" href="http://localhost:4000/projects/project-2/">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  
+  <!-- 多种CSS引用方式，确保至少一种能生效 -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <!-- 使用绝对路径引用 -->
+  <link rel="stylesheet" href="https://sting1000.github.io/assets/css/main.css">
+  
+  <!-- 添加内联样式作为备份 -->
+  <style>
+    /* 基本样式定义 - 蓝色系莫兰迪色系 */
+:root {
+  /* 全局基础颜色 */
+  --primary-color: #5a7a8c;     /* 柔和的蓝灰色 */
+  --secondary-color: #7d9bab;   /* 淡蓝色 */
+  --accent-color: #4c6575;      /* 深蓝灰色强调 */
+  --text-color: #2a3b47;        /* 深蓝灰色文字，提高对比度 */
+  --text-light: #546d7a;        /* 中蓝灰色文字 */
+  --background-color: #f5f7fa;  /* 淡蓝白色背景 */
+  --section-bg: #e9eef2;        /* 淡蓝灰色区块背景 */
+  --border-color: #d1dce2;      /* 浅蓝灰色边框 */
+  
+  /* 首页特定颜色 - 蓝灰色调 */
+  --home-primary: #5a7a8c;
+  --home-secondary: #7d9bab;
+  --home-accent: #4c6575;
+  --home-section-bg: #e9eef2;
+  
+  /* 关于我页特定颜色 - 青蓝色调 */
+  --about-primary: #4a7c8c;
+  --about-secondary: #689eae;
+  --about-accent: #3d6975;
+  --about-section-bg: #e3eef2;
+  
+  /* 项目页特定颜色 - 蓝紫色调 */
+  --projects-primary: #5d6e9c;
+  --projects-secondary: #7c8db6;
+  --projects-accent: #4b5a86;
+  --projects-section-bg: #e6eaf5;
+  
+  /* 思考页特定颜色 - 灰蓝色调 */
+  --blog-primary: #536878;
+  --blog-secondary: #708090;
+  --blog-accent: #3d4f61;
+  --blog-section-bg: #e6eaef;
+  
+  /* 联系页特定颜色 - 蓝绿色调 */
+  --contact-primary: #4a7d83;
+  --contact-secondary: #6aa5aa;
+  --contact-accent: #3b686d;
+  --contact-section-bg: #e3eeef;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+  line-height: 1.7;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* 页面特定样式 */
+body.home .banner,
+body.home .btn { background: linear-gradient(120deg, var(--home-primary), var(--home-secondary)); }
+body.home .feature-section { background-color: var(--home-section-bg); }
+body.home h1, body.home h3, body.home a:not(.btn) { color: var(--home-primary); }
+body.home a:hover:not(.btn) { color: var(--home-accent); }
+body.home .btn { color: white !important; }
+body.home .btn:hover { color: white !important; opacity: 0.9; }
+body.home .education-item { border-left-color: var(--home-accent); }
+
+body.about .banner,
+body.about .btn { background: linear-gradient(120deg, var(--about-primary), var(--about-secondary)); }
+body.about .feature-section { background-color: var(--about-section-bg); }
+body.about h1, body.about h3, body.about a:not(.btn) { color: var(--about-primary); }
+body.about a:hover:not(.btn) { color: var(--about-accent); }
+body.about .btn { color: white !important; }
+body.about .btn:hover { color: white !important; opacity: 0.9; }
+
+body.projects .banner,
+body.projects .btn { background: linear-gradient(120deg, var(--projects-primary), var(--projects-secondary)); }
+body.projects .feature-section { background-color: var(--projects-section-bg); }
+body.projects h1, body.projects h3, body.projects a:not(.btn) { color: var(--projects-primary); }
+body.projects a:hover:not(.btn) { color: var(--projects-accent); }
+body.projects .btn { color: white !important; }
+body.projects .btn:hover { color: white !important; opacity: 0.9; }
+
+body.blog .banner,
+body.blog .btn { background: linear-gradient(120deg, var(--blog-primary), var(--blog-secondary)); }
+body.blog .feature-section { background-color: var(--blog-section-bg); }
+body.blog h1, body.blog h3, body.blog a:not(.btn) { color: var(--blog-primary); }
+body.blog a:hover:not(.btn) { color: var(--blog-accent); }
+body.blog .btn { color: white !important; }
+body.blog .btn:hover { color: white !important; opacity: 0.9; }
+
+body.contact .banner,
+body.contact .btn { background: linear-gradient(120deg, var(--contact-primary), var(--contact-secondary)); }
+body.contact .feature-section { background-color: var(--contact-section-bg); }
+body.contact h1, body.contact h3, body.contact a:not(.btn) { color: var(--contact-primary); }
+body.contact a:hover:not(.btn) { color: var(--contact-accent); }
+body.contact .btn { color: white !important; }
+body.contact .btn:hover { color: white !important; opacity: 0.9; }
+
+/* 网站标题黑色设置 */
+.site-title a {
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+.site-header .site-title a {
+  color: #000000 !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.6em;
+  color: var(--primary-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+.banner {
+  background: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 3em 2em;
+  text-align: center;
+  margin-bottom: 2em;
+  border-radius: 8px;
+}
+
+.banner h1, .banner h2, .banner h3, .banner p {
+  color: white !important;
+}
+
+.banner p {
+  font-size: 1.3em;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feature-section {
+  background-color: var(--section-bg);
+  padding: 2em;
+  border-radius: 8px;
+  margin: 2em 0;
+}
+
+.card {
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 0.7em 1.4em;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  color: white !important;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.two-column > div {
+  flex: 1;
+  min-width: 300px;
+}
+
+.site-header {
+  background-color: var(--background-color);
+  padding: 1em 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2em;
+}
+
+.site-footer {
+  margin-top: 3em;
+  padding: 2em 0;
+  background-color: var(--section-bg);
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+} 
+
+/* 教育部分样式 */
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.education-item {
+  background-color: var(--background-color);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.2em 1.5em;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.education-item h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.education-item p {
+  margin-bottom: 0;
+  color: var(--text-light);
+} 
+  </style>
+  <!-- 添加字体图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="projects">
+  <header class="site-header">
+  <div class="container">
+    <div class="site-title">
+      <a href="/">苏哲宸 | AI解决方案与产品专家</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+    <nav class="site-nav">
+  <div class="nav-links">
+    <a href="/" >首页</a>
+    <a href="/about/" >关于我</a>
+    <a href="/projects/" >项目</a>
+    <a href="/blog/" >思考</a>
+    <a href="/contact/" >联系</a>
+  </div>
+</nav>
+
+<style>
+  /* 确保导航链接可点击 */
+  .site-nav a {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    z-index: 100; /* 提高z-index确保元素可点击 */
+  }
+  
+  /* 扩大点击区域 */
+  .nav-links {
+    display: flex;
+    gap: 0.5em;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links.active {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--background-color);
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1em 0;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .nav-links.active a {
+      padding: 12px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style> 
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+      
+      // 点击导航链接后关闭菜单
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('active');
+        });
+      });
+    }
+  });
+</script> 
+
+  <main class="site-content">
+    <div class="container">
+      <article class="post">
+  <header class="post-header">
+    <h1 class="post-title">推荐系统优化与产品化</h1>
+    <p class="post-meta">
+      <time datetime=""></time>
+      
+    </p>
+  </header>
+
+  <div class="post-content">
+    <h2 id="项目背景">项目背景</h2>
+
+<p>在一个大型内容平台，用户留存率和每日活跃时间是关键指标。分析发现，用户流失的主要原因是难以发现感兴趣的内容。平台已有基础推荐系统，但效果不佳，且缺乏产品层面的优化。</p>
+
+<h2 id="挑战">挑战</h2>
+
+<ol>
+  <li><strong>冷启动问题</strong>: 新用户和新内容无历史数据</li>
+  <li><strong>实时性要求</strong>: 用户兴趣变化快，系统需实时响应</li>
+  <li><strong>技术与产品割裂</strong>: 已有的推荐算法与实际产品体验脱节</li>
+  <li><strong>透明度与可控性</strong>: 用户希望理解并控制推荐结果</li>
+</ol>
+
+<h2 id="我的角色">我的角色</h2>
+
+<p>作为项目的算法工程师，我负责算法优化，同时主导了产品功能的设计：</p>
+
+<ul>
+  <li><strong>算法职责</strong>: 优化推荐模型，提升准确率和召回率</li>
+  <li><strong>产品职责</strong>: 设计推荐内容的展示方式和用户控制界面</li>
+</ul>
+
+<h2 id="解决方案">解决方案</h2>
+
+<h3 id="算法层面">算法层面</h3>
+
+<ol>
+  <li><strong>混合推荐策略</strong>:
+    <ul>
+      <li>结合协同过滤、内容特征和用户上下文</li>
+      <li>解决冷启动问题的多模态特征提取</li>
+      <li>引入多目标优化，平衡点击率与观看时长</li>
+    </ul>
+  </li>
+  <li><strong>实时计算架构</strong>:
+    <ul>
+      <li>基于Spark Streaming的特征更新流水线</li>
+      <li>毫秒级的实时个性化服务</li>
+      <li>多级缓存策略，平衡性能与实时性</li>
+    </ul>
+  </li>
+  <li><strong>算法解释性</strong>:
+    <ul>
+      <li>开发特征重要性分析工具</li>
+      <li>构建推荐理由生成模块</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="产品层面">产品层面</h3>
+
+<ol>
+  <li><strong>个性化首页体验</strong>:
+    <ul>
+      <li>设计分区布局，既有算法推荐，也有确定性内容</li>
+      <li>根据用户习惯动态调整版面占比</li>
+    </ul>
+  </li>
+  <li><strong>推荐理由展示</strong>:
+    <ul>
+      <li>显示”为什么推荐给你”的简洁说明</li>
+      <li>视觉化呈现内容与用户兴趣的匹配度</li>
+    </ul>
+  </li>
+  <li><strong>用户控制中心</strong>:
+    <ul>
+      <li>设计”兴趣管理”界面</li>
+      <li>提供”不感兴趣”和”查看更多类似内容”功能</li>
+      <li>开发”内容探索模式”，突破信息茧房</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="技术与产品的结合点">技术与产品的结合点</h2>
+
+<p>作为同时负责算法和产品设计的团队成员，我在项目中关注以下结合点：</p>
+
+<ol>
+  <li><strong>推荐解释性</strong>:
+    <ul>
+      <li>将复杂的算法逻辑转化为用户可理解的推荐理由</li>
+      <li>设计视觉化元素表达内容相关性</li>
+    </ul>
+  </li>
+  <li><strong>用户反馈循环</strong>:
+    <ul>
+      <li>将用户显性反馈直接纳入算法决策</li>
+      <li>设计隐式反馈收集机制，优化数据质量</li>
+    </ul>
+  </li>
+  <li><strong>A/B测试框架</strong>:
+    <ul>
+      <li>构建同时评估技术指标和产品体验的测试框架</li>
+      <li>开发仪表板统一展示模型性能和用户行为</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="业务成果">业务成果</h2>
+
+<ol>
+  <li><strong>用户参与度</strong>:
+    <ul>
+      <li>用户平均停留时间增加35%</li>
+      <li>内容消费多样性提升25%</li>
+    </ul>
+  </li>
+  <li><strong>用户满意度</strong>:
+    <ul>
+      <li>推荐相关性评分从3.2提升至4.5（满分5分）</li>
+      <li>用户主动内容调整操作减少40%</li>
+    </ul>
+  </li>
+  <li><strong>技术绩效</strong>:
+    <ul>
+      <li>推荐点击率(CTR)提升28%</li>
+      <li>系统响应时间减少60%</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="经验总结">经验总结</h2>
+
+<h3 id="技术视角">技术视角</h3>
+
+<ul>
+  <li>推荐系统性能瓶颈往往不在模型本身，而在特征工程和实时性</li>
+  <li>多目标优化比单一指标优化更能平衡短期和长期价值</li>
+  <li>算法透明度对用户信任至关重要</li>
+</ul>
+
+<h3 id="产品视角">产品视角</h3>
+
+<ul>
+  <li>仅有准确的推荐是不够的，用户需要理解和控制</li>
+  <li>用户体验中的小细节（如推荐理由）对感知质量影响巨大</li>
+  <li>平衡算法决定和用户自主选择是产品设计的核心</li>
+</ul>
+
+<h3 id="个人成长">个人成长</h3>
+
+<p>通过这个项目，我深刻认识到算法工程师需要具备产品思维。当我参与设计用户如何与推荐系统交互时，我发现很多之前认为是”纯工程问题”的挑战，实际上是产品设计问题。这种认知转变让我开始更系统地思考如何将技术能力包装成真正有价值的产品功能。</p>
+
+<h2 id="相关资源">相关资源</h2>
+
+<ul>
+  <li><a href="https://example.com/recommendation-architecture">系统架构详解</a></li>
+  <li><a href="https://example.com/ab-test-results">A/B测试结果分析</a></li>
+  <li><a href="https://example.com/ux-research-report">用户体验研究报告</a></li>
+</ul>
+
+  </div>
+  
+  <div class="post-navigation">
+    <div class="post-pagination">
+      
+        <a href="/projects/project-1/" class="prev">
+          &laquo; 智能客服NLP引擎
+        </a>
+      
+      
+      
+    </div>
+  </div>
+</article> 
+    </div>
+  </main>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <p>&copy; 2025 苏哲宸. 保留所有权利。</p>
+        <p class="small">算法背景 · 产品思维 · AI解决方案</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/yourusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/yourusername" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="mailto:your.email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-nav">
+      <a href="/">首页</a>
+      <a href="/about/">关于我</a>
+      <a href="/projects/">项目</a>
+      <a href="/blog/">思考</a>
+      <a href="/contact/">联系</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-content {
+    margin-bottom: 1.5em;
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+  }
+  
+  .footer-links a {
+    font-size: 1.2em;
+    margin: 0 0.5em;
+  }
+  
+  .small {
+    font-size: 0.9em;
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-nav {
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+  }
+</style> 
+
+  <!-- 添加调试信息 -->
+  <script>
+    console.log('正在尝试加载样式表');
+    document.addEventListener('DOMContentLoaded', function() {
+      // 检查样式是否已经加载
+      var styles = document.styleSheets;
+      for (var i = 0; i < styles.length; i++) {
+        console.log('已加载样式表:', styles[i].href);
+      }
+    });
+  </script>
+</body>
+</html> 

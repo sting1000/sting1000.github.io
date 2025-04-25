@@ -1,0 +1,165 @@
+/* 自定义CSS，增强作品集网站的视觉效果 */
+
+/* 技能列表样式 */
+.skill-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 1.5em;
+}
+
+.skill-list li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.8em;
+  line-height: 1.6;
+}
+
+.skill-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #3d85c6;
+  font-weight: bold;
+}
+
+/* 项目卡片样式增强 */
+.archive__item {
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.archive__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.archive__item-title {
+  margin-top: 0.5em;
+  font-weight: 600;
+}
+
+.archive__item-excerpt {
+  margin-top: 0.8em;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* 博客文章列表样式 */
+.latest-thoughts {
+  margin: 2em 0;
+}
+
+.thought-item {
+  margin-bottom: 2.5em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.thought-item:last-child {
+  border-bottom: none;
+}
+
+.thought-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+.page__meta {
+  font-size: 0.8em;
+  color: #737373;
+  margin-bottom: 1em;
+}
+
+/* 联系页面样式 */
+.contact-info {
+  background: #f8f9fa;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+.contact-item i {
+  color: #3d85c6;
+  width: 20px;
+  text-align: center;
+  margin-right: 10px;
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .feature_row {
+    flex-direction: column;
+  }
+  
+  .feature_row__item {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  
+  .archive__item-teaser img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 强调色和高亮 */
+.highlight-blue {
+  color: #3d85c6;
+  font-weight: 600;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+  padding: 2em;
+  border-radius: 8px;
+  margin: 2em 0;
+}
+
+/* 标题样式增强 */
+.page__title,
+.archive__item-title {
+  position: relative;
+  padding-bottom: 0.5em;
+}
+
+.page__title:after,
+.archive__item-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #3d85c6;
+}
+
+/* 按钮样式美化 */
+.btn {
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background-color: #3d85c6;
+}
+
+.btn--primary:hover {
+  background-color: #2d6da3;
+  transform: translateY(-2px);
+}
+
+/* 项目详情页样式 */
+.project-meta {
+  background-color: #f8f9fa;
+  padding: 1.5em;
+  border-radius: 8px;
+  margin-bottom: 2em;
+}
+
+.project-meta h4 {
+  margin-top: 0;
+  border-bottom: 1px solid #e1e1e1;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+} 
